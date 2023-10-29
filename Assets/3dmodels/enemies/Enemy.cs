@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour
     public float dmgDelay = 0.0f;
     private void OnTriggerEnter(Collider collision)
     {
-        
         if(dmgDelay <= 0.0f && collision.gameObject.tag == "Weapon" && player.attacking)
         {
             dmgDelay = 0.5f;
