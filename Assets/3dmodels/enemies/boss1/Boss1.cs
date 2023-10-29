@@ -31,13 +31,16 @@ public class Boss1 : MonoBehaviour
     }
     bool close;
     bool walking;
+    string chosen;
     void Update()
     {
         close = Vector3.Distance(transform.position, self.player.transform.position) < 10.0f;
         walking = animator.GetCurrentAnimatorStateInfo(0).IsName("Walk");
         if (close && walking)
         {
-            animator.SetTrigger(choseAction());
+            animator.SetBool(chosen, false);
+            chosen = choseAction();
+            animator.SetBool(chosen, true);
         }
         self.damage = Convert.ToInt32(!walking) * damage;
         weapon.transform.localRotation = root.transform.localRotation * Quaternion.Euler(77.4f, 90.0f, 0.0f);

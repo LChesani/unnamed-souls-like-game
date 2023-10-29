@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] public float damage;
     [SerializeField] public MainCharacter player;
     [SerializeField] EnemyWeapon weapon;
+    [SerializeField] int blood;
     public Vector3 initialPos;
     public float hp;
     public float dmgDelay = 0.0f;
@@ -40,7 +41,8 @@ public class Enemy : MonoBehaviour
         }
         if(hp <= 0)
         {
-            transform.parent.gameObject.SetActive(false);
+            player.feedBlood(blood);
+            gameObject.SetActive(false);
         }
     }
 }

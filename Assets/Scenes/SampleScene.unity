@@ -1261,11 +1261,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 865742067}
+    m_TransformParent: {fileID: 638393302}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 12d16d5ef611d624093d13ccbba0c1a5, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12d16d5ef611d624093d13ccbba0c1a5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12d16d5ef611d624093d13ccbba0c1a5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12d16d5ef611d624093d13ccbba0c1a5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12d16d5ef611d624093d13ccbba0c1a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1273,7 +1285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12d16d5ef611d624093d13ccbba0c1a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.042
+      value: 1.4483801
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12d16d5ef611d624093d13ccbba0c1a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1313,7 +1325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 12d16d5ef611d624093d13ccbba0c1a5, type: 3}
       propertyPath: m_Name
-      value: model
+      value: undead
       objectReference: {fileID: 0}
     - target: {fileID: 7430206395826003560, guid: 12d16d5ef611d624093d13ccbba0c1a5, type: 3}
       propertyPath: m_TagString
@@ -1397,6 +1409,7 @@ MonoBehaviour:
   damage: 50
   player: {fileID: 1482684997}
   weapon: {fileID: 1784079267}
+  blood: 15
   initialPos: {x: 0, y: 0, z: 0}
   hp: 25
   dmgDelay: 0
@@ -8929,7 +8942,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 865742067}
+  - {fileID: 268426554}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9999,38 +10012,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1482684997}
   goEnemies: {fileID: 638393301}
---- !u!1 &865742066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 865742067}
-  m_Layer: 0
-  m_Name: Undead
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &865742067
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865742066}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.39, y: 1.39, z: 1.39}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 268426554}
-  m_Father: {fileID: 638393302}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &880050605
 GameObject:
   m_ObjectHideFlags: 0
@@ -12311,7 +12292,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: b0a4c1643f35c2e4e813a2773cca5479, type: 3}
   Description: Nothing more than a broken sword.
   damage: 5
-  blockDamage: 5
+  blockDamage: 0.01
   staminaCost: 100
   sanctuary: {fileID: 1711229873}
   t: 0
@@ -30360,6 +30341,7 @@ MonoBehaviour:
   damage: 0
   player: {fileID: 1482684997}
   weapon: {fileID: 1161037140}
+  blood: 5000
   initialPos: {x: 0, y: 0, z: 0}
   hp: 0
   dmgDelay: 0
