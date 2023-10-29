@@ -144,7 +144,7 @@ public class MainCharacter : MonoBehaviour
         {
             if (!dashing || dmgDelay >= 0.0f)
             {
-                dmgDelay = 1.0f;
+                dmgDelay = 20.0f;
                 HP.x -= collision.gameObject.GetComponent<EnemyWeapon>().getDamage();
             }
         }

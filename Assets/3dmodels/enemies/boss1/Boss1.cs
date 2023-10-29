@@ -34,7 +34,7 @@ public class Boss1 : MonoBehaviour
     string chosen;
     void Update()
     {
-        close = Vector3.Distance(transform.position, self.player.transform.position) < 10.0f;
+        close = Math.Abs(Vector3.Distance(transform.position, self.player.transform.position)) < 10.0f;
         walking = animator.GetCurrentAnimatorStateInfo(0).IsName("Walk");
         if (close && walking)
         {
