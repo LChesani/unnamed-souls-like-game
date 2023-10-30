@@ -11,13 +11,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -3290734174119104090}
-    m_Position: {x: 600, y: 230, z: 0}
+    m_Position: {x: 850, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -770735492351441744}
-    m_Position: {x: 380, y: 100, z: 0}
+    m_Position: {x: 370, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2986081330900446569}
-    m_Position: {x: 240, y: -100, z: 0}
+    m_Position: {x: 220, y: -90, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -85,7 +85,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Attack1
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2209531107155004751}
@@ -183,12 +183,6 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: attack3
     m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: Blend
-    m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0

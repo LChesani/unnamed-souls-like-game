@@ -94,7 +94,7 @@ public class MainCharacter : MonoBehaviour
         {
             isRunning = false;
             attacking = false;
-            bloodOfFools = 0;
+            bloodOfFools /= 2;
             if(chk != null)
             {
                 transform.position = chk.transform.position; //volta pro checkpoint
@@ -144,7 +144,7 @@ public class MainCharacter : MonoBehaviour
         {
             if (!dashing || dmgDelay >= 0.0f)
             {
-                dmgDelay = 20.0f;
+                dmgDelay = 2000.0f;
                 HP.x -= collision.gameObject.GetComponent<EnemyWeapon>().getDamage();
             }
         }
