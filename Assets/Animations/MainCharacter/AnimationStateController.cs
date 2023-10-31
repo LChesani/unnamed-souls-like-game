@@ -35,7 +35,7 @@ public class AnimationStateController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && timerRoll <= 0.0f && self.getStamina().x > 50.0f && self.isRunning)
             {
                 self.dashing = true;
-                timerRoll = 0.3f;
+                timerRoll = 0.5f;
                 self.adjustStamina(-50.0f);
                 animator.SetBool("isDashing", true);
             }

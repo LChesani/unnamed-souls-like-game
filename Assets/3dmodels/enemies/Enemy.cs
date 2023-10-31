@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] public MainCharacter player;
     [SerializeField] EnemyWeapon weapon;
     [SerializeField] int blood;
+    [SerializeField] public string bossName;
     public Vector3 initialPos;
     public float hp;
     public float dmgDelay = 0.0f;

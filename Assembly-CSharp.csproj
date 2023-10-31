@@ -75,6 +75,7 @@
     <Compile Include="Assets\3dmodels\enemies\EnemyWeapon.cs" />
     <Compile Include="Assets\Scripts\MC Utils\Attribute.cs" />
     <Compile Include="Assets\3dmodels\enemies\baseEnemie\source\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\UI Utils\bossManager\BossManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

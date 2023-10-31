@@ -363,6 +363,7 @@
 "Assets/Scripts/MC Utils/Attribute.cs"
 "Assets/Scripts/MC Utils/MainCharacter.cs"
 "Assets/Scripts/MC Utils/TargetFollow.cs"
+"Assets/Scripts/UI Utils/bossManager/BossManager.cs"
 "Assets/Scripts/UI Utils/FireLightSimulator.cs"
 "Assets/Scripts/UI Utils/Inventory/ButtonManager.cs"
 "Assets/Scripts/UI Utils/Inventory/InventoryManager.cs"

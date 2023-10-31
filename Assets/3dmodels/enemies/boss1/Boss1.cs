@@ -17,7 +17,8 @@ public class Boss1 : MonoBehaviour
     {
         "attack1",
         "attack2",
-        "attack3"
+        "attack3",
+        "attack4"
     };
 
     void Start()
@@ -34,14 +35,16 @@ public class Boss1 : MonoBehaviour
     string chosen;
     void Update()
     {
-        close = Math.Abs(Vector3.Distance(transform.position, self.player.transform.position)) < 10.0f;
+        close = Math.Abs(Vector3.Distance(transform.position, self.player.transform.position)) < 4.0f;
         walking = animator.GetCurrentAnimatorStateInfo(0).IsName("Walk");
+        
         if (close && walking)
         {
             animator.SetBool(chosen, false);
             chosen = choseAction();
             animator.SetBool(chosen, true);
         }
+        
         self.damage = Convert.ToInt32(!walking) * damage;
         weapon.transform.localRotation = root.transform.localRotation * Quaternion.Euler(77.4f, 90.0f, 0.0f);
     }

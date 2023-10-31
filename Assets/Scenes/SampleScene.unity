@@ -1098,6 +1098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 241790192}
+  - component: {fileID: 241790193}
   m_Layer: 0
   m_Name: Bosses
   m_TagString: Untagged
@@ -1121,6 +1122,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &241790193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241790191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a2fe0bb6d7956d44909a72c7d0691a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: {fileID: 0}
 --- !u!1 &261847834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,6 +1424,7 @@ MonoBehaviour:
   player: {fileID: 1482684997}
   weapon: {fileID: 1784079267}
   blood: 15
+  bossName: 
   initialPos: {x: 0, y: 0, z: 0}
   hp: 25
   dmgDelay: 0
@@ -9337,6 +9352,7 @@ MonoBehaviour:
   action: inRange
   animator: {fileID: 268426557}
   player: {fileID: 1482684997}
+  bm: {fileID: 0}
 --- !u!1 &753871780
 GameObject:
   m_ObjectHideFlags: 0
@@ -10920,6 +10936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52aa62c873c948e41b439049fdd90ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageDelay: 0
   damage: 50
 --- !u!65 &1055340227
 BoxCollider:
@@ -11415,6 +11432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52aa62c873c948e41b439049fdd90ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageDelay: 4000
   damage: 250
 --- !u!1001 &1162111252
 PrefabInstance:
@@ -12188,6 +12206,7 @@ MonoBehaviour:
   action: inCloseRange
   animator: {fileID: 268426557}
   player: {fileID: 1482684997}
+  bm: {fileID: 0}
 --- !u!1001 &1182839327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20149,6 +20168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52aa62c873c948e41b439049fdd90ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageDelay: 0
   damage: 50
 --- !u!1 &1791846399
 GameObject:
@@ -20811,6 +20831,7 @@ MonoBehaviour:
   action: walk
   animator: {fileID: 2142631594209432325}
   player: {fileID: 1482684997}
+  bm: {fileID: 0}
 --- !u!1 &1939756361
 GameObject:
   m_ObjectHideFlags: 0
@@ -30342,6 +30363,7 @@ MonoBehaviour:
   player: {fileID: 1482684997}
   weapon: {fileID: 1161037140}
   blood: 5000
+  bossName: Guardian Of The Gates
   initialPos: {x: 0, y: 0, z: 0}
   hp: 0
   dmgDelay: 0

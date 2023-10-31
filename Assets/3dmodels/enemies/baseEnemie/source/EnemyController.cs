@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -11,8 +12,10 @@ public class EnemyController : MonoBehaviour
     float rotationSpeed;
     Vector3 playerDirection;
     bool close;
+    Enemy thisEnemy;
     private void Start()
     {
+        thisEnemy = transform.parent.transform.GetComponent<Enemy>();
         rotationSpeed = 2.0f;
     }
     private void OnTriggerStay(Collider collision)
@@ -24,6 +27,16 @@ public class EnemyController : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(playerDirection);
             transform.parent.transform.rotation = Quaternion.Slerp(transform.parent.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
             animator.SetBool(action, true);
+        }
+    }
+
+    [SerializeField] BossManager bm;
+     
+    private void OnTriggerEnter(Collider collision)
+    {
+        if(thisEnemy.bossName.Length > 0)
+        {
+            thisEnemy.transform.parent.transform.GetComponent<BossManager>().active = thisEnemy;
         }
     }
 
