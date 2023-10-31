@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class MainCharacter : MonoBehaviour
@@ -142,7 +143,7 @@ public class MainCharacter : MonoBehaviour
     {
         if(collision.gameObject.tag == "EnemyWeapon")
         {
-            if (!dashing || dmgDelay >= 0.0f)
+            if (!dashing || dmgDelay <= 0.0f)
             {
                 dmgDelay = collision.gameObject.transform.GetComponent<EnemyWeapon>().damageDelay;
                 HP.x -= collision.gameObject.GetComponent<EnemyWeapon>().getDamage();

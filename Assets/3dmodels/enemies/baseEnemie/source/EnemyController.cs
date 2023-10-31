@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour
      
     private void OnTriggerEnter(Collider collision)
     {
-        if(thisEnemy.bossName.Length > 0)
+        if(action == "walk" && thisEnemy.bossName.Length > 0)
         {
             thisEnemy.transform.parent.transform.GetComponent<BossManager>().active = thisEnemy;
         }
@@ -43,5 +43,9 @@ public class EnemyController : MonoBehaviour
     private void OnTriggerExit(Collider collision)
     {
         animator.SetBool(action, false);
+        if (action == "walk" && thisEnemy.bossName.Length > 0)
+        {
+            thisEnemy.transform.parent.transform.GetComponent<BossManager>().active = null;
+        }
     }
 }
