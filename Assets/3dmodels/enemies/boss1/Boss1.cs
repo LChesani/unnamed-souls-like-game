@@ -32,7 +32,7 @@ public class Boss1 : MonoBehaviour
     }
     bool close;
     bool walking;
-    string chosen;
+    string chosen = "";
     void Update()
     {
         close = Math.Abs(Vector3.Distance(transform.position, self.player.transform.position)) < 4.0f;
@@ -40,7 +40,7 @@ public class Boss1 : MonoBehaviour
         
         if (close && walking)
         {
-            animator.SetBool(chosen, false);
+            if(chosen != "") animator.SetBool(chosen, false);
             chosen = choseAction();
             animator.SetBool(chosen, true);
         }

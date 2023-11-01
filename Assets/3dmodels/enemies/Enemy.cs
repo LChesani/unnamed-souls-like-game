@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    [SerializeField] float maxHp;
+    [SerializeField] public float maxHp;
     [SerializeField] public float damage;
     [SerializeField] public MainCharacter player;
     [SerializeField] EnemyWeapon weapon;

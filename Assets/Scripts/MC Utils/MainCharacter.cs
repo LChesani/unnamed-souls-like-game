@@ -137,15 +137,15 @@ public class MainCharacter : MonoBehaviour
         }
     }
 
-    private float dmgDelay = 0.0f;
+    public float dmgDelay = 0.0f;
 
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "EnemyWeapon")
         {
-            if (!dashing || dmgDelay <= 0.0f)
+            if (!dashing && dmgDelay <= 0.0f)
             {
-                dmgDelay = collision.gameObject.transform.GetComponent<EnemyWeapon>().damageDelay;
+                dmgDelay = collision.gameObject.GetComponent<EnemyWeapon>().damageDelay;
                 HP.x -= collision.gameObject.GetComponent<EnemyWeapon>().getDamage();
             }
         }

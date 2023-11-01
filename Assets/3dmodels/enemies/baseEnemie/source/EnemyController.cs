@@ -31,21 +31,9 @@ public class EnemyController : MonoBehaviour
     }
 
     [SerializeField] BossManager bm;
-     
-    private void OnTriggerEnter(Collider collision)
-    {
-        if(action == "walk" && thisEnemy.bossName.Length > 0)
-        {
-            thisEnemy.transform.parent.transform.GetComponent<BossManager>().active = thisEnemy;
-        }
-    }
 
     private void OnTriggerExit(Collider collision)
     {
         animator.SetBool(action, false);
-        if (action == "walk" && thisEnemy.bossName.Length > 0)
-        {
-            thisEnemy.transform.parent.transform.GetComponent<BossManager>().active = null;
-        }
     }
 }
