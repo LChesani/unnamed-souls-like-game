@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] MainCharacter player;
+    public MainCharacter player;
     [SerializeField] GameObject lvlDisplay;
     [SerializeField] GameObject goBtnSub;
     [SerializeField] GameObject goBtnAdd;
@@ -16,6 +16,7 @@ public class LevelManager : MonoBehaviour
     private int n_levels;
     void Start()
     {
+        player = GameObject.FindWithTag("Player").GetComponent<MainCharacter>();
         player.initAttribs();
         attribute = player.GetAttribute(name);
         goBtnAdd.GetComponent<Button>().onClick.AddListener(Inc);

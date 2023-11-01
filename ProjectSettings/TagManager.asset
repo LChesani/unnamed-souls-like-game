@@ -8,6 +8,9 @@ TagManager:
   - Weapon
   - EnemyWeapon
   - Ground
+  - BossManager
+  - GameManager
+  - EnemyList
   layers:
   - Default
   - TransparentFX

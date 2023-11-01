@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Altar : MonoBehaviour
 {
-    [SerializeField] MainCharacter player;
+    public MainCharacter player;
     [SerializeField] GameObject altarCanvas;
     [SerializeField] GameObject lvlObj;
     [SerializeField] GameObject exitObj;
@@ -50,6 +50,7 @@ public class Altar : MonoBehaviour
     }
     void Start()
     {
+        player = GameObject.FindWithTag("Player").GetComponent<MainCharacter>();
         levelUp = lvlObj.transform.gameObject.GetComponent<Button>();
         levelUp.onClick.AddListener(levelIncrease);
         leave = exitObj.transform.gameObject.GetComponent<Button>();

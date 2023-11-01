@@ -360,6 +360,8 @@
 "Assets/3dmodels/World/Altar/Altar.cs"
 "Assets/Animations/MainCharacter/AnimationStateController.cs"
 "Assets/GameManager.cs"
+"Assets/Scripts/Map/HerosMemory.cs"
+"Assets/Scripts/Map/MapInit.cs"
 "Assets/Scripts/MC Utils/Attribute.cs"
 "Assets/Scripts/MC Utils/MainCharacter.cs"
 "Assets/Scripts/MC Utils/TargetFollow.cs"

@@ -7,15 +7,13 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] string action;
     [SerializeField] Animator animator;
-    [SerializeField] MainCharacter player;
+    public MainCharacter player;
 
     float rotationSpeed;
     Vector3 playerDirection;
-    bool close;
-    Enemy thisEnemy;
     private void Start()
     {
-        thisEnemy = transform.parent.transform.GetComponent<Enemy>();
+        player = GameObject.FindWithTag("Player").GetComponent<MainCharacter>();
         rotationSpeed = 2.0f;
     }
     private void OnTriggerStay(Collider collision)

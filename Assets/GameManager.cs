@@ -1,19 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Tracing;
-using UniGLTF;
-using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] MainCharacter player;
-    [SerializeField] GameObject goEnemies;
-    Enemy[] enemies;
+    public GameObject goEnemies;
+    public Enemy[] enemies;
+    [SerializeField] GameObject[] essentials;
+    public string activeBoss;
     void Start()
     {
-        enemies = goEnemies.transform.GetComponentsInChildren<Enemy>();
+        
         player.OnReset += resetCall;
+        GameObject.DontDestroyOnLoad(this);
+        foreach(GameObject Obj in essentials)
+        {
+            GameObject.DontDestroyOnLoad(Obj);
+        }
+
+        SceneManager.LoadScene("Map");
+        
     }
 
     public void resetCall()
@@ -30,11 +35,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.getHP().x <= 0.0f)
+        if(goEnemies != null)
         {
-            player.resetChk(true);
-            resetCall();
+            if (player.getHP().x <= 0.0f)
+            {
+                player.resetChk(true);
+                resetCall();
+            }
         }
-        
     }
 }

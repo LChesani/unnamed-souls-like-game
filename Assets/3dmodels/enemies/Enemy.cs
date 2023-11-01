@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] public float maxHp;
     [SerializeField] public float damage;
-    [SerializeField] public MainCharacter player;
+    public MainCharacter player;
     [SerializeField] EnemyWeapon weapon;
     [SerializeField] int blood;
     [SerializeField] public string bossName;
@@ -28,7 +28,8 @@ public class Enemy : MonoBehaviour
         hp = maxHp;
     }
 
-    private void Start() { 
+    private void Start() {
+        player = GameObject.FindWithTag("Player").GetComponent<MainCharacter>();
         hp = maxHp;
         initialPos = transform.position;
     }

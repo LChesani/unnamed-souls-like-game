@@ -4,8 +4,11 @@ using UnityEngine;
 public class DisplayInfo : MonoBehaviour
 {
     [SerializeField] TMPro.TextMeshProUGUI gui;
-    [SerializeField] MainCharacter player;
-
+    public MainCharacter player;
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player").GetComponent<MainCharacter>();
+    }
     void Update()
     {
         int lvl = player.getLevel();

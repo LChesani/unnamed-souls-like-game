@@ -1,37 +1,57 @@
-using System.Collections;
-using System.Collections.Generic;
+using UniGLTF;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BossManager : MonoBehaviour
 {
     Enemy[] bosses;
-    public Enemy active;
-    [SerializeField] TMPro.TextMeshProUGUI bossName;
+
+    public GameObject active;
+    [SerializeField] TMPro.TextMeshProUGUI nameBox;
     [SerializeField] Slider hp;
+    Enemy activeEnemy;
+    MainCharacter player;
     void Start()
     {
         bosses = GetComponentsInChildren<Enemy>();
+        foreach(Enemy boss in bosses)
+        {
+            boss.gameObject.SetActive(false);
+        }
     }
 
     void UiRender()
     {
-        hp.value = active.hp;
+        hp.value = activeEnemy.hp;
     }
-
-    public void activate(Enemy enemy)
+    string bossName;
+    public void activate()
     {
-        hp.maxValue = active.maxHp;
-        this.active = enemy;
-        bossName.text = active.bossName;
+        player = GameObject.FindWithTag("Player").GetComponent<MainCharacter>();
+        active = transform.GetChildByName(bossName).gameObject;
+        active.transform.GetChildByName("Hearing").GetComponent<EnemyController>().player = player;
+        active.SetActive(true);   
+        activeEnemy = active.GetComponent<Enemy>();
+        activeEnemy.player = player;
+        hp.maxValue = activeEnemy.maxHp;
+        nameBox.text = activeEnemy.bossName;
     }
-
+    GameManager gm;
     void Update()
-    {   
-        if(active != null)
+    {   if(GameObject.FindWithTag("GameManager") != null)
+        {
+            gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+            bossName = gm.activeBoss;
+            activate();
+        }
+        if(activeEnemy != null)
         {
             UiRender();
+            if(activeEnemy.hp < 50.0f)
+            {
+                SceneManager.LoadScene("Game");
+            }
         }
-        
     }
 }
