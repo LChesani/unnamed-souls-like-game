@@ -79,56 +79,58 @@
     <Compile Include="Assets\3dmodels\enemies\EnemyWeapon.cs" />
     <Compile Include="Assets\Scripts\MC Utils\Attribute.cs" />
     <Compile Include="Assets\3dmodels\enemies\baseEnemie\source\EnemyController.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollisionType.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Math3d.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BruteForceMesh.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerCamera.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BSPTree.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\Gravity.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperStateMachine.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\WarriorInputSystemController.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\WarriorController.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\WarriorTiming.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\DebugDraw.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\WarriorAnimatorEvents.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\WarriorData.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Demo Elements\Code\GUIControls.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\WarriorMovementController.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\SimpleStateMachine.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperMath.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerInputController.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\IKHands.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerMachineDebug.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollider.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Demo Elements\Code\CameraController.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\WarriorInputController.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerMachine.cs" />
+    <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\AnimatorParentMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_attribute.hlsl" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_geometry_vertex.hlsl" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_geometry_uv.hlsl" />
-    <None Include="Assets\VRMShaders\GLTF\IO\Resources\UniGLTF\NormalMapExporter.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_depthnormals_fragment.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_lighting_mtoon.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_shadowcaster_vertex.hlsl" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_forward_vertex.hlsl" />
-    <None Include="Assets\VRMShaders\GLTF\IO\Resources\UniGLTF\StandardMapExporter.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_depthnormals_vertex.hlsl" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_urp.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_forward_fragment.hlsl" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_geometry_alpha.hlsl" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_input.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_lighting_unity.hlsl" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_depthonly_fragment.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_depthonly_vertex.hlsl" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_utility.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\VRMShaders\GLTF\IO\Resources\UniGLTF\StandardMapImporter.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_render_pipeline.hlsl" />
-    <None Include="Assets\VRMShaders\GLTF\UniUnlit\Resources\UniGLTF\UniUnlit.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_geometry_normal.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_shadowcaster_fragment.hlsl" />
+    <None Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Hovl Studio\Procedural fire\Demo scene\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
-    <None Include="Assets\VRMShaders\VRM10\MToon10\Resources\VRM10\vrmc_materials_mtoon_define.hlsl" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -838,22 +840,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UniHumanoid.csproj">
-      <Project>{9BBBF8D2-5433-7168-BBB5-EE4EBAD4D1EE}</Project>
-      <Name>UniHumanoid</Name>
-    </ProjectReference>
-    <ProjectReference Include="VRMShaders.GLTF.IO.Runtime.csproj">
-      <Project>{203AE496-CFC3-6D57-7ED1-6C02B7FD1D52}</Project>
-      <Name>VRMShaders.GLTF.IO.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniGLTF.csproj">
-      <Project>{9F3210E4-8AC8-7A84-9591-5FE48EE1A1F5}</Project>
-      <Name>UniGLTF</Name>
-    </ProjectReference>
-    <ProjectReference Include="VRM.csproj">
-      <Project>{717E6EB4-37C7-146B-E922-CC2B85D9F0D7}</Project>
-      <Name>VRM</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

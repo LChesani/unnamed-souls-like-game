@@ -1,4 +1,3 @@
-using UniGLTF;
 using UnityEngine;
 using UnityEngine.UI;
 

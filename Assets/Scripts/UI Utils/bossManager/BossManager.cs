@@ -1,6 +1,4 @@
-using UniGLTF;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BossManager : MonoBehaviour
@@ -29,7 +27,7 @@ public class BossManager : MonoBehaviour
     public void activate()
     {
         player = GameObject.FindWithTag("Player").GetComponent<MainCharacter>();
-        active = transform.GetChildByName(bossName).gameObject;
+        active = transform.Find(bossName).gameObject;
         active.SetActive(true);   
         activeEnemy = active.GetComponent<Enemy>();
         activeEnemy.player = player;

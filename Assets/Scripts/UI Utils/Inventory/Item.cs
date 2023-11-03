@@ -1,11 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UniGLTF;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
+
 
 public class Item : MonoBehaviour
 {
@@ -35,8 +29,8 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
-        sanctuary = transform.GetChildByName("Sanctuary").gameObject;
-        sanctuaryCollider = transform.GetChildByName("SanctuaryCollider").gameObject;
+        sanctuary = transform.Find("Sanctuary").gameObject;
+        sanctuaryCollider = transform.Find("SanctuaryCollider").gameObject;
     }
     public void pick()
     {
