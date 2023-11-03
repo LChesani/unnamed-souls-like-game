@@ -9,7 +9,9 @@ AnimatorOverrideController:
   m_Name: Weapon Animator
   m_Controller: {fileID: 9100000, guid: fb8ed9df2eb6fea48929a3176aa6d22b, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 9ab04e33b41ba1846a8579b8ecfc78be, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: c7a7ecb24de716c42b1c51547b222526, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3e7d2a5871187b447b0c14af0b753802, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 05030929bc8a19a44ac39a481d366e47, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: e97912d768cd5d049a0d2f52ef5f04ff, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: ed697bd873dd1c24b9afc0be64d0df82, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9ab04e33b41ba1846a8579b8ecfc78be, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c7a7ecb24de716c42b1c51547b222526, type: 2}

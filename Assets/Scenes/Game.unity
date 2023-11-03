@@ -4200,8 +4200,9 @@ MonoBehaviour:
   Stamina: {x: 0, y: 0}
   inventory: {fileID: 282244321}
   aura: {fileID: 1939756361}
-  hand: {fileID: 2759225549827706245}
+  hand: {fileID: 5236165696602090647}
   dashing: 0
+  staminaRunOut: 0
   attacking: 0
   isRunning: 0
   Using: {fileID: 0}
