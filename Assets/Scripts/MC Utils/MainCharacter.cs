@@ -1,16 +1,13 @@
 using System;
-using System.Collections;
+
 using System.Collections.Generic;
-using System.Threading;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEditor;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class MainCharacter : MonoBehaviour
 {
     [SerializeField] Vector2 HP; //Hp and max HP
-    [SerializeField] Vector2 Stamina; //Stamina and Max Stamina
+    [SerializeField] public Vector2 Stamina; //Stamina and Max Stamina
     [SerializeField] InventoryManager inventory;
     [SerializeField] GameObject aura;
     [SerializeField] GameObject hand;
@@ -19,9 +16,8 @@ public class MainCharacter : MonoBehaviour
     Dictionary<string, Attribute> attributes;
     public bool dashing;
     private int Level;
-    private bool staminaRunOut;
+    public bool staminaRunOut;
     public bool attacking;
-    private float attackCoolDown;
     public bool isRunning;
     public Item Using;
     public bool inAltar;
@@ -177,6 +173,14 @@ public class MainCharacter : MonoBehaviour
         }
     }
 
+    public void Attack()
+    {
+        if(Using != null)
+        {
+            Stamina.x -= Using.staminaCost;
+            attacking = true;
+        }
+    }
 
     void Update()
     {
@@ -232,33 +236,19 @@ public class MainCharacter : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) && !staminaRunOut)
         {
-            if(!dashing) { this.Stamina.x -= 0.6f; }
-            
-            if(this.Stamina.x < 0.0f)
+            if(!dashing) {Stamina.x -= 0.6f; }
+
+            if(Stamina.x < 0.0f)
             {
                 staminaRunOut = true;
                 Stamina.x = 0.0f;
             }
         }
+
+
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             staminaRunOut = false;
-        }
-
-        if(attackCoolDown >= 0.0f)
-        {
-            attackCoolDown  -= Time.deltaTime;
-        }
-        else
-        {
-            attacking = false;
-        }
-
-        if (Input.GetMouseButtonDown(0) && !attacking && Using != null && Stamina.x > Using.staminaCost)
-        {
-            attacking = true;
-            Stamina.x -= Using.staminaCost;
-            attackCoolDown = 0.6f;
         }
 
         else if (Stamina.x < Stamina.y && !dashing && !attacking)

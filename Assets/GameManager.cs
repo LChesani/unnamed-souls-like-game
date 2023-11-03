@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public GameObject goEnemies;
     public Enemy[] enemies;
     [SerializeField] GameObject[] essentials;
+    
     public string activeBoss;
     void Start()
     {

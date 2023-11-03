@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4741032861585528545
+--- !u!1 &2181542606038646313
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,97 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3600185755509630705}
-  - component: {fileID: 7047262727346586381}
-  m_Layer: 0
-  m_Name: collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3600185755509630705
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4741032861585528545}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8470459, z: -0}
-  m_LocalScale: {x: 4.26, y: 4.260001, z: 4.260001}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7136097672020458430}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
---- !u!65 &7047262727346586381
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4741032861585528545}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.17, z: 0.03}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &5048109393244513267
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5048109393244513266}
-  - component: {fileID: 5048109393244513269}
-  m_Layer: 0
-  m_Name: SanctuaryCollider
-  m_TagString: Sanctuary
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5048109393244513266
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5048109393244513267}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.26, y: 4.260001, z: 4.26}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7136097672020458430}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5048109393244513269
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5048109393244513267}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.65, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &8018832999910430892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7136097672020458430}
+  - component: {fileID: 1298857859760659771}
+  - component: {fileID: 4828455370701220141}
   m_Layer: 0
   m_Name: Broken Sword
   m_TagString: Untagged
@@ -106,31 +17,145 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7136097672020458430
+--- !u!4 &1298857859760659771
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8018832999910430892}
+  m_GameObject: {fileID: 2181542606038646313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 500.262, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3600185755509630705}
-  - {fileID: 2032841134283187494}
-  - {fileID: 5048109393244513266}
-  - {fileID: 2032841133981521932}
+  - {fileID: 4681657354064085108}
+  - {fileID: 7870288203243520931}
+  - {fileID: 3963317132185404791}
+  - {fileID: 7870288203008327305}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1998651833198641869
+--- !u!114 &4828455370701220141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2181542606038646313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8268db13a4be52841bea4e429bc1293f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  Name: Broken Sword
+  icon: {fileID: 21300000, guid: b0a4c1643f35c2e4e813a2773cca5479, type: 3}
+  Description: Nothing more than a broken sword.
+  damage: 5
+  blockDamage: 5
+  staminaCost: 50
+  t: 0
+  req: {x: 1, y: 1}
+  damageScale: {x: 0, y: 0}
+  aoc: {fileID: 22100000, guid: 72a4d1ab7b0a79a43ab7f68377c0c799, type: 2}
+  picked: 0
+--- !u!1 &3514341618679623780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4681657354064085108}
+  - component: {fileID: 1207548873298371976}
+  m_Layer: 0
+  m_Name: collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4681657354064085108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3514341618679623780}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8470459, z: -0}
+  m_LocalScale: {x: 4.26, y: 4.260001, z: 4.260001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1298857859760659771}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!65 &1207548873298371976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3514341618679623780}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.17, z: 0.03}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3963317132185404790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3963317132185404791}
+  - component: {fileID: 3963317132185404784}
+  m_Layer: 0
+  m_Name: SanctuaryCollider
+  m_TagString: Sanctuary
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3963317132185404791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3963317132185404790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.26, y: 4.260001, z: 4.26}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1298857859760659771}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3963317132185404784
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3963317132185404790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.65, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &7688304345606677576
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7136097672020458430}
+    m_TransformParent: {fileID: 1298857859760659771}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5cdad0d86072e4f48b079a8b3a50585b, type: 3}
       propertyPath: m_RootOrder
@@ -202,17 +227,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cdad0d86072e4f48b079a8b3a50585b, type: 3}
---- !u!4 &2032841134283187494 stripped
+--- !u!4 &7870288203243520931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5cdad0d86072e4f48b079a8b3a50585b, type: 3}
-  m_PrefabInstance: {fileID: 1998651833198641869}
+  m_PrefabInstance: {fileID: 7688304345606677576}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1998651833500319719
+--- !u!1001 &7688304345841883490
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7136097672020458430}
+    m_TransformParent: {fileID: 1298857859760659771}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 827ae74ced6d8a4489f8db5a8783a976, type: 3}
       propertyPath: m_RootOrder
@@ -284,8 +309,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 827ae74ced6d8a4489f8db5a8783a976, type: 3}
---- !u!4 &2032841133981521932 stripped
+--- !u!4 &7870288203008327305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 827ae74ced6d8a4489f8db5a8783a976, type: 3}
-  m_PrefabInstance: {fileID: 1998651833500319719}
+  m_PrefabInstance: {fileID: 7688304345841883490}
   m_PrefabAsset: {fileID: 0}

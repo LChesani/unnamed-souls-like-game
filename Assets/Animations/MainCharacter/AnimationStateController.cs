@@ -79,17 +79,24 @@ public class AnimationStateController : MonoBehaviour
         }
     }
 
+
+
+    void attack()
+    {
+        self.attacking = false;
+    }
+
     void Update()
     {
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); // Valor de -1 a 1 para as teclas "A" e "D".
 
         self.isRunning = input.x != 0.0f || input.y != 0.0f;
+
         animator.SetBool("isRunning", self.isRunning);
-        animator.SetBool("isFast", Input.GetKey(KeyCode.LeftShift) && self.isRunning && !self.getStaminaRunOut( ));
-        animator.SetBool("isAttacking", self.attacking);
-        animator.SetBool("withWeapon", self.Using != null);
+        animator.SetBool("isFast", Input.GetKey(KeyCode.LeftShift) && self.isRunning && !self.getStaminaRunOut() );
         animator.SetBool("inAltar", self.inAltar && !self.isRunning);
         animator.SetBool("isHealing", self.healing);
+        animator.SetBool("isAttacking", Input.GetMouseButton(0) && (self.Using != null) && (self.Stamina.x > self.Using.staminaCost));
         pickItem();
         rotate(input.x, input.y);
         roll();

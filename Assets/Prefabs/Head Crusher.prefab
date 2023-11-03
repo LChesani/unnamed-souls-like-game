@@ -149,6 +149,7 @@ MonoBehaviour:
   t: 0
   req: {x: 25, y: 8}
   damageScale: {x: 0.5, y: 0.05}
+  aoc: {fileID: 22100000, guid: a4ed3ac51d4f7414d857d2a27d0e7efc, type: 2}
   picked: 0
 --- !u!1001 &670848528376795773
 PrefabInstance:

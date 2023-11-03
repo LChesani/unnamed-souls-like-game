@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] GameObject hand;
@@ -29,6 +29,8 @@ public class ButtonManager : MonoBehaviour
 
     Item aux = null;
 
+    public event Action OnWeaponChange;
+
     void use()
     {
         if(selected != null)
@@ -43,6 +45,8 @@ public class ButtonManager : MonoBehaviour
             aux.transform.localPosition = new Vector3(0.00013f, 0.00103f, -0.00038f);
             mc.Using = aux;
             mc.Using.picked = true;
+            mc.gameObject.GetComponent<Animator>().runtimeAnimatorController = mc.Using.aoc;
+            OnWeaponChange?.Invoke();
         }
     }
 

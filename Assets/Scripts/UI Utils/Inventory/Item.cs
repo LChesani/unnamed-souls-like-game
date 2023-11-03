@@ -24,6 +24,8 @@ public class Item : MonoBehaviour
     [SerializeField] Type t;
     [SerializeField] public Vector2Int req; //requirements
     [SerializeField] public Vector2 damageScale;
+    [SerializeField] public AnimatorOverrideController aoc;
+
     public bool picked = false;
 
 

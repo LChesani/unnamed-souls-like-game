@@ -16060,96 +16060,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &1292647337973087434
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 7741224711925811606}
-    m_Modifications:
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 500.262
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8018832999910430892, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-      propertyPath: m_Name
-      value: Broken Sword
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
---- !u!4 &8284623171998975860 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7136097672020458430, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-  m_PrefabInstance: {fileID: 1292647337973087434}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &9131322877846103142 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8018832999910430892, guid: baf1292edd34e864f9d500a0865675dc, type: 3}
-  m_PrefabInstance: {fileID: 1292647337973087434}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2593090584109593442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9131322877846103142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8268db13a4be52841bea4e429bc1293f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  Name: Broken Sword
-  icon: {fileID: 21300000, guid: b0a4c1643f35c2e4e813a2773cca5479, type: 3}
-  Description: Nothing more than a broken sword.
-  damage: 5
-  blockDamage: 5
-  staminaCost: 50
-  t: 0
-  req: {x: 1, y: 1}
-  damageScale: {x: 0, y: 0}
-  picked: 0
 --- !u!1001 &3307334818610219915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16848,4 +16758,66 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8079092264643034077, guid: 8b5f95b60509f5f40807ebd74da3aeaa, type: 3}
   m_PrefabInstance: {fileID: 5998618405515110523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6989195977495812687
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7741224711925811606}
+    m_Modifications:
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 500.262
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181542606038646313, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+      propertyPath: m_Name
+      value: Broken Sword
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+--- !u!4 &8284623171998975860 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1298857859760659771, guid: aef301780c8db8e4faaeb53337ee5e72, type: 3}
+  m_PrefabInstance: {fileID: 6989195977495812687}
   m_PrefabAsset: {fileID: 0}
