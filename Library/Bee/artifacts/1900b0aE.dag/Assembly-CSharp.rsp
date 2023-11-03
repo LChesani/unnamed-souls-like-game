@@ -374,6 +374,7 @@
 "Assets/Scripts/UI Utils/LevelManager/DisplayInfo.cs"
 "Assets/Scripts/UI Utils/LevelManager/LevelManager.cs"
 "Assets/Scripts/UI Utils/StatusBars/BarsManager.cs"
+"Assets/Unity.VisualScripting.Generated/VisualScripting.Core/AotStubs.cs"
 -langversion:9.0
 
 /deterministic

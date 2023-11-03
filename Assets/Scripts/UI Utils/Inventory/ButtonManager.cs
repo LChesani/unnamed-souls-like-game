@@ -1,3 +1,4 @@
+using UniGLTF;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +17,6 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] TMPro.TextMeshProUGUI sc2;
 
     [SerializeField] TMPro.TextMeshProUGUI dmg;
-
     Item selected;
     TMPro.TextMeshProUGUI gui;
     Button btn;
@@ -25,7 +25,7 @@ public class ButtonManager : MonoBehaviour
         gui = GetComponent<TMPro.TextMeshProUGUI>();
         btn = transform.parent.gameObject.GetComponent<Button>();
         btn.onClick.AddListener(use);
-        selected = inventory.weaponSelected;
+        selected = inventory.weaponSelected; 
     }
 
     Item aux = null;
@@ -38,9 +38,10 @@ public class ButtonManager : MonoBehaviour
                 Destroy(mc.Using.gameObject);
                 mc.Using = null;
             }
+
             aux = Instantiate(selected, hand.transform.position, Quaternion.identity);
             aux.transform.SetParent(hand.transform);
-            aux.transform.localPosition = new Vector3(0.00085f, 0.00082f, 0.00138f);
+            aux.transform.localPosition = new Vector3(0.00013f, 0.00103f, -0.00038f);
             mc.Using = aux;
             mc.Using.picked = true;
         }

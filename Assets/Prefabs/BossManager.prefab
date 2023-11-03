@@ -36,7 +36,6 @@ Transform:
   - {fileID: 6737151548856015168}
   - {fileID: 579932624202624853}
   - {fileID: 4120775595048757448}
-  - {fileID: 4665691706087806761}
   m_Father: {fileID: 4838686242173595088}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -90,12 +89,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d328c92df83a0834e964fa41144bd94f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 2000
+  maxHp: 500
   damage: 0
   player: {fileID: 0}
   weapon: {fileID: 4665691706852425156}
   blood: 5000
   bossName: Bloodless
+  animator: {fileID: 0}
   initialPos: {x: 0, y: 0, z: 0}
   hp: 0
   dmgDelay: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: {fileID: 0}
-  bossName: {fileID: 4665691707097434155}
+  nameBox: {fileID: 0}
   hp: {fileID: 4665691708092292600}
 --- !u!1 &4234192905192077526
 GameObject:
@@ -1479,68 +1479,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &4665691706087806760
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4665691706087806761}
-  - component: {fileID: 4665691706087806763}
-  - component: {fileID: 4665691706087806762}
-  m_Layer: 0
-  m_Name: Hearing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4665691706087806761
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4665691706087806760}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 856767097458700783}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4665691706087806763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4665691706087806760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb274466d4a6958499a7ac232a02e6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: walk
-  animator: {fileID: 6702471108546358165}
-  player: {fileID: 0}
-  bm: {fileID: 0}
---- !u!65 &4665691706087806762
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4665691706087806760}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 2, z: 20}
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &4665691706451087145
 GameObject:
   m_ObjectHideFlags: 0

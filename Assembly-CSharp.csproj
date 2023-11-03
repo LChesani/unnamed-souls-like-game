@@ -57,9 +57,11 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Map\MapInit.cs" />
     <Compile Include="Assets\Animations\MainCharacter\AnimationStateController.cs" />
     <Compile Include="Assets\Scripts\UI Utils\Inventory\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\UI Utils\bossManager\BossManager.cs" />
+    <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\AotStubs.cs" />
     <Compile Include="Assets\Scripts\UI Utils\LevelManager\DisplayInfo.cs" />
     <Compile Include="Assets\Scripts\MC Utils\TargetFollow.cs" />
     <Compile Include="Assets\3dmodels\World\Altar\Altar.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Scripts\MC Utils\MainCharacter.cs" />
     <Compile Include="Assets\Scripts\UI Utils\Inventory\InventoryManager.cs" />
+    <Compile Include="Assets\Scripts\Map\HerosMemory.cs" />
     <Compile Include="Assets\3dmodels\enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\UI Utils\Inventory\Item.cs" />
     <Compile Include="Assets\Scripts\UI Utils\LevelManager\LevelManager.cs" />
@@ -76,8 +79,6 @@
     <Compile Include="Assets\3dmodels\enemies\EnemyWeapon.cs" />
     <Compile Include="Assets\Scripts\MC Utils\Attribute.cs" />
     <Compile Include="Assets\3dmodels\enemies\baseEnemie\source\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\Map\HerosMemory.cs" />
-    <Compile Include="Assets\Scripts\Map\MapInit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

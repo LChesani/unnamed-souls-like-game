@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UniGLTF;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -24,27 +25,32 @@ public class Item : MonoBehaviour
     [SerializeField] public float damage;
     [SerializeField] public float blockDamage;
     [SerializeField] public float staminaCost;
-    [SerializeField] GameObject sanctuary;
+    GameObject sanctuary;
+    GameObject sanctuaryCollider;
     [SerializeField] Type t;
     [SerializeField] public Vector2Int req; //requirements
     [SerializeField] public Vector2 damageScale;
     public bool picked = false;
 
 
-    
+    private void Start()
+    {
+        sanctuary = transform.GetChildByName("Sanctuary").gameObject;
+        sanctuaryCollider = transform.GetChildByName("SanctuaryCollider").gameObject;
+    }
     public void pick()
     {
         picked = true;
-        transform.GetChild(2).gameObject.SetActive(false);
-        transform.GetChild(1).gameObject.SetActive(false);
+        sanctuary.SetActive(false);
+        sanctuaryCollider.SetActive(false);
     }
 
     void Update()
     {
         if (!picked)
         {
-            transform.Rotate(0, Time.deltaTime * 25.0f, Time.deltaTime * 25.0f);
-            sanctuary.transform.localRotation = Quaternion.Inverse(transform.localRotation);
+            transform.Rotate(0.0f, Time.deltaTime * 25.0f, 0.0f);
+            sanctuary.transform.Rotate(0.0f, -Time.deltaTime * 25.0f, 0.0f);
         }
     }
 }

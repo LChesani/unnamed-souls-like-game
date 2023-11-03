@@ -18,6 +18,7 @@ public class HerosMemory : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
+                collision.transform.position = new Vector3(0.0f, 0.0f, 30.0f);
                 SceneManager.LoadScene("BossFight");
                 gm.activeBoss = bossName;
             }

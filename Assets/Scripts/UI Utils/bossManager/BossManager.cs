@@ -30,7 +30,6 @@ public class BossManager : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").GetComponent<MainCharacter>();
         active = transform.GetChildByName(bossName).gameObject;
-        active.transform.GetChildByName("Hearing").GetComponent<EnemyController>().player = player;
         active.SetActive(true);   
         activeEnemy = active.GetComponent<Enemy>();
         activeEnemy.player = player;
@@ -38,6 +37,12 @@ public class BossManager : MonoBehaviour
         nameBox.text = activeEnemy.bossName;
     }
     GameManager gm;
+
+    void end() //trata o final da batalha
+    {
+
+    }
+
     void Update()
     {   if(GameObject.FindWithTag("GameManager") != null)
         {
@@ -48,9 +53,9 @@ public class BossManager : MonoBehaviour
         if(activeEnemy != null)
         {
             UiRender();
-            if(activeEnemy.hp < 50.0f)
+            if(activeEnemy.hp < 0.0f)
             {
-                SceneManager.LoadScene("Game");
+                end();
             }
         }
     }
