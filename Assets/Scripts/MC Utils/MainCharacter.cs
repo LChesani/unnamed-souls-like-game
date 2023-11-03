@@ -183,13 +183,12 @@ public class MainCharacter : MonoBehaviour
     }
 
 
-
     void Update()
     {
 
         if(Using != null)
         {
-            Using.transform.localRotation = hand.transform.localRotation * Quaternion.Euler(-90.0f, 90.0f, 0.0f);
+            Using.transform.localRotation = hand.transform.localRotation * Quaternion.Euler(0.0f, -90.0f, 45.0f);
         }
 
         if(dmgDelay >= 0.0f)
@@ -253,7 +252,7 @@ public class MainCharacter : MonoBehaviour
             staminaRunOut = false;
         }
 
-        else if (Stamina.x < Stamina.y && !dashing && !attacking)
+        else if (Stamina.x < Stamina.y && !dashing)
         {
             Stamina.x += 0.4f;
         }

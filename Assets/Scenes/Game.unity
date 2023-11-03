@@ -4200,7 +4200,7 @@ MonoBehaviour:
   Stamina: {x: 0, y: 0}
   inventory: {fileID: 282244321}
   aura: {fileID: 1939756361}
-  hand: {fileID: 5236165696602090647}
+  hand: {fileID: 107321051937087870}
   dashing: 0
   staminaRunOut: 0
   attacking: 0
@@ -4211,6 +4211,7 @@ MonoBehaviour:
   chk: {fileID: 0}
   pick: 0
   dmgDelay: 0
+  dog: {x: 0, y: 0, z: 0}
 --- !u!114 &1482684998
 MonoBehaviour:
   m_ObjectHideFlags: 0
