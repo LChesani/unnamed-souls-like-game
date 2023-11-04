@@ -89,7 +89,7 @@ public class AnimationStateController : MonoBehaviour
     void Update()
     {
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); // Valor de -1 a 1 para as teclas "A" e "D".
-
+        
         self.isRunning = input.x != 0.0f || input.y != 0.0f;
 
         animator.SetBool("isRunning", self.isRunning);
@@ -100,5 +100,6 @@ public class AnimationStateController : MonoBehaviour
         pickItem();
         rotate(input.x, input.y);
         roll();
+        self.attacking = animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") || animator.GetCurrentAnimatorStateInfo(0).IsName("Alter Attack");
     }
 }

@@ -252,7 +252,7 @@ public class MainCharacter : MonoBehaviour
             staminaRunOut = false;
         }
 
-        else if (Stamina.x < Stamina.y && !dashing)
+        else if (Stamina.x < Stamina.y && !dashing && !attacking)
         {
             Stamina.x += 0.4f;
         }
