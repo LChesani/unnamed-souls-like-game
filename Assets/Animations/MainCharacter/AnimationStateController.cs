@@ -13,32 +13,18 @@ public class AnimationStateController : MonoBehaviour
     float rotationSpeed = 2.0f * 720.0f; // Velocidade de rotação do personagem.
     float currentRotationSpeed; // Velocidade atual de rotação.
 
-    float timerRoll;
-
     void Start()
     {
         animator = GetComponent<Animator>();
         currentRotationSpeed = rotationSpeed;
-        timerRoll = 0;
     }
 
     void roll()
     {
-        if (timerRoll > 0.0f)
+        if (Input.GetKeyDown(KeyCode.Space) && self.getStamina().x > 50.0f && !self.dashing)
         {
-            timerRoll -= Time.deltaTime;
-        }
-        if (timerRoll <= 0)
-        {
-            animator.SetBool("isDashing", false);
-            self.dashing = false;
-            if (Input.GetKeyDown(KeyCode.Space) && timerRoll <= 0.0f && self.getStamina().x > 50.0f && self.isRunning)
-            {
-                self.dashing = true;
-                timerRoll = 0.5f;
-                self.adjustStamina(-50.0f);
-                animator.SetBool("isDashing", true);
-            }
+            self.adjustStamina(-50.0f);
+            animator.SetBool("isDashing", true);
         }
     }
 
@@ -79,7 +65,6 @@ public class AnimationStateController : MonoBehaviour
         }
     }
 
-
     void Update()
     {
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); // Valor de -1 a 1 para as teclas "A" e "D".
@@ -91,6 +76,8 @@ public class AnimationStateController : MonoBehaviour
         animator.SetBool("inAltar", self.inAltar && !self.isRunning);
         animator.SetBool("isHealing", self.healing);
         animator.SetBool("isAttacking", Input.GetMouseButton(0) && (self.Using != null) && (self.Stamina.x > self.Using.staminaCost));
+
+        
         pickItem();
         rotate(input.x, input.y);
         roll();

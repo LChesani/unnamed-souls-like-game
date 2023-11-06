@@ -45,7 +45,6 @@ public class ButtonManager : MonoBehaviour
             aux.transform.localPosition = new Vector3(0.00013f, 0.00103f, -0.00038f);
             mc.Using = aux;
             mc.Using.picked = true;
-            mc.attacking = false;
             mc.gameObject.GetComponent<Animator>().runtimeAnimatorController = mc.Using.aoc;
             OnWeaponChange?.Invoke();
         }

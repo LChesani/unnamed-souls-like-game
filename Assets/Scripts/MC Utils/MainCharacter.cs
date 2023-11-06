@@ -1,6 +1,7 @@
 using System;
 
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.UI;
 using UnityEngine;
 
@@ -48,7 +49,7 @@ public class MainCharacter : MonoBehaviour
 
     public void takeDamage(float v)
     {
-        HP.x -= v;
+        if(!dashing) HP.x -= v;
     }
 
     private void recalc()
@@ -84,6 +85,16 @@ public class MainCharacter : MonoBehaviour
 
     public event Action OnReset;
 
+    public void setDash()
+    {
+        dashing = true;
+    }
+
+    public void resetDash()
+    {
+        dashing = false;
+        animator.SetBool("isDashing", false);
+    }
 
     public void resetChk(bool byDeath)
     {
@@ -92,7 +103,6 @@ public class MainCharacter : MonoBehaviour
         if(byDeath)
         {
             isRunning = false;
-            attacking = false;
             bloodOfFools /= 2;
             if(chk != null)
             {
@@ -109,7 +119,7 @@ public class MainCharacter : MonoBehaviour
 
     public float calculateDamage() //(base + escala)/(2.5+e * ehIncapaz)
     {
-        if(attributes == null)
+        if( (attributes == null) || ((Using.damage > -0.5f) && (Using.damage < 0.5f)) )
         {
             return 0;
         }
@@ -135,17 +145,13 @@ public class MainCharacter : MonoBehaviour
         }
     }
 
-    public float dmgDelay = 0.0f;
 
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "EnemyWeapon")
         {
-            if (!dashing && dmgDelay <= 0.0f)
-            {
-                dmgDelay = collision.gameObject.GetComponent<EnemyWeapon>().damageDelay;
-                HP.x -= collision.gameObject.GetComponent<EnemyWeapon>().getDamage();
-            }
+           takeDamage(collision.gameObject.GetComponent<EnemyWeapon>().getDamage());
+           collision.gameObject.GetComponent<EnemyWeapon>().damage = 0.0f;
         }
     }
 
@@ -168,7 +174,6 @@ public class MainCharacter : MonoBehaviour
 
     void heal()
     {
-        
         if(HP.x < HP.y)
         {
             healing = true;
@@ -176,27 +181,36 @@ public class MainCharacter : MonoBehaviour
             bloodOfFools -= (int)(500.0f * Time.deltaTime);
         }
     }
-
+    float timerAttack = 0.0f;
     public void Attack()
     {
         if(Using != null)
         {
+            attacking = true;
             Stamina.x -= Using.staminaCost;
+            timerAttack = animator.GetNextAnimatorStateInfo(0).length-0.5f;
+            Using.damage = Using.trueDamage;
         }
     }
 
-
     void Update()
     {
-        attacking = animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") || animator.GetCurrentAnimatorStateInfo(0).IsName("Alter Attack");
+
+        if(timerAttack > 0.0f)
+        {
+            timerAttack -= Time.deltaTime;
+        }
+        else
+        {
+            if(Using != null) Using.damage = 0.0f;
+            attacking = false;
+        }
+
+
+
         if (Using != null)
         {
             Using.transform.localRotation = hand.transform.localRotation * Quaternion.Euler(0.0f, -90.0f, 45.0f);
-        }
-
-        if(dmgDelay >= 0.0f)
-        {
-            dmgDelay -= Time.deltaTime;
         }
 
         aura.SetActive(healing);
@@ -236,13 +250,13 @@ public class MainCharacter : MonoBehaviour
         {
             healing = false;
         }
-        
+       
 
         if (Input.GetKey(KeyCode.LeftShift) && !staminaRunOut && !attacking)
         {
             if(!dashing) {Stamina.x -= 0.6f; }
 
-            if(Stamina.x < 0.0f)
+            if(Stamina.x <= 0.0f)
             {
                 staminaRunOut = true;
                 Stamina.x = 0.0f;
@@ -255,10 +269,11 @@ public class MainCharacter : MonoBehaviour
             staminaRunOut = false;
         }
 
-        else if (Stamina.x < Stamina.y && !dashing && !attacking)
+        else if ((Stamina.x < Stamina.y) && !dashing && !attacking)
         {
             Stamina.x += 0.4f;
         }
+
+
     }
-    
 }

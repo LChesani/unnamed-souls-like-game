@@ -11,7 +11,7 @@ public class Boss1 : MonoBehaviour
     [SerializeField] GameObject weapon;
     [SerializeField] Animator animator;
     [SerializeField] Enemy self;
-    [SerializeField] float damage;
+
     System.Random rnd = new System.Random();
     string[] actions =
     {
@@ -45,7 +45,6 @@ public class Boss1 : MonoBehaviour
             animator.SetBool(chosen, true);
         }
         
-        self.damage = Convert.ToInt32(!walking) * damage;
         weapon.transform.localRotation = root.transform.localRotation * Quaternion.Euler(77.4f, 90.0f, 0.0f);
     }
 }

@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 
@@ -16,7 +17,8 @@ public class Item : MonoBehaviour
     [SerializeField] public string Name;
     [SerializeField] public Sprite icon;
     [SerializeField] public string Description;
-    [SerializeField] public float damage;
+    [SerializeField] public float trueDamage;
+    public float damage;
     [SerializeField] public float blockDamage;
     [SerializeField] public float staminaCost;
     GameObject sanctuary;
