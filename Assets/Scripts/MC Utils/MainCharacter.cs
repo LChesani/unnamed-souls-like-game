@@ -11,6 +11,7 @@ public class MainCharacter : MonoBehaviour
     [SerializeField] InventoryManager inventory;
     [SerializeField] GameObject aura;
     [SerializeField] GameObject hand;
+    Animator animator;
     private int bloodOfFools;
     private bool isShowing;
     Dictionary<string, Attribute> attributes;
@@ -42,7 +43,7 @@ public class MainCharacter : MonoBehaviour
     public int getCost()
     {
         float lvl = getLevel();
-        return (int)(0.5f * (lvl * lvl * lvl) + 1.0f * (lvl * lvl) + 2.0f * (lvl));
+        return (int)(0.25f * (lvl * lvl * lvl) + 0.5f * (lvl * lvl) + 5.0f * (lvl));
     }
 
     public void takeDamage(float v)
@@ -60,6 +61,7 @@ public class MainCharacter : MonoBehaviour
         Level += v;
         recalc();
     }
+
 
     public int getLevel() { return Level; }
 
@@ -149,6 +151,7 @@ public class MainCharacter : MonoBehaviour
 
     private void Start()
     {
+        initAttribs();
         chk = null;
         inAltar = false;
         bloodOfFools = 999999;
@@ -160,6 +163,7 @@ public class MainCharacter : MonoBehaviour
         Level = 1;
         HP = new Vector2(500.0f, 500.0f);
         Stamina = new Vector2(250.0f, 250.0f);
+        animator = transform.GetComponent<Animator>();
     }
 
     void heal()
@@ -178,15 +182,14 @@ public class MainCharacter : MonoBehaviour
         if(Using != null)
         {
             Stamina.x -= Using.staminaCost;
-            attacking = true;
         }
     }
 
 
     void Update()
     {
-
-        if(Using != null)
+        attacking = animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") || animator.GetCurrentAnimatorStateInfo(0).IsName("Alter Attack");
+        if (Using != null)
         {
             Using.transform.localRotation = hand.transform.localRotation * Quaternion.Euler(0.0f, -90.0f, 45.0f);
         }
@@ -211,7 +214,7 @@ public class MainCharacter : MonoBehaviour
             }
         }
         
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !inAltar)
         {
             isShowing = !isShowing;
             inventory.gameObject.SetActive(isShowing);
@@ -235,7 +238,7 @@ public class MainCharacter : MonoBehaviour
         }
         
 
-        if (Input.GetKey(KeyCode.LeftShift) && !staminaRunOut)
+        if (Input.GetKey(KeyCode.LeftShift) && !staminaRunOut && !attacking)
         {
             if(!dashing) {Stamina.x -= 0.6f; }
 

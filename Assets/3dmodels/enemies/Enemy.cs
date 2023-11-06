@@ -18,9 +18,9 @@ public class Enemy : MonoBehaviour
     Vector3 playerDirection;
     private void OnTriggerEnter(Collider collision)
     {
-        if(dmgDelay <= 0.0f && collision.gameObject.tag == "Weapon" && player.attacking)
+        if((dmgDelay <= 0.0f) && (collision.gameObject.tag == "Weapon") && player.attacking)
         {
-            dmgDelay = 0.5f;
+            dmgDelay = 1.0f;
             hp -= player.calculateDamage();
         }
     }

@@ -10,7 +10,6 @@ public class InventoryManager : MonoBehaviour
     public Slot selected;
     public Item weaponSelected;
 
-    Item cpy;
     void Start()
     {
         size = new Vector2Int(0, 16);

@@ -13,11 +13,10 @@ public class LevelManager : MonoBehaviour
     Attribute attribute;
     TMPro.TextMeshProUGUI gui;
     Button btn;
-    private int n_levels;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<MainCharacter>();
-        player.initAttribs();
         attribute = player.GetAttribute(name);
         goBtnAdd.GetComponent<Button>().onClick.AddListener(Inc);
         goBtnSub.GetComponent<Button>().onClick.AddListener(Dec);
