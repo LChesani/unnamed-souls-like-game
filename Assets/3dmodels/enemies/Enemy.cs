@@ -36,11 +36,12 @@ public class Enemy : MonoBehaviour
         initialPos = transform.position;
     }
     float rotationSpeed = 2.0f;
-    float attackTimer = 0.0f;
+    [SerializeField] float attackTimer;
+    float timing = 0.0f;
     public void damageOn()
     {
         weapon.damage = damage;
-        attackTimer = 5.0f;
+        timing = attackTimer;
     }
     
     void Update()
@@ -52,9 +53,10 @@ public class Enemy : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(playerDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
-        if(attackTimer > 0.0f)
+        if(timing > 0.0f)
         {
-            attackTimer -= Time.deltaTime;
+            timing -= Time.deltaTime;
+            weapon.damage = damage;
         }
         else
         {

@@ -212,6 +212,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 987588073}
+    - target: {fileID: 856767097458700561, guid: 98376adc68b930548b1c5f2325b5d094, type: 3}
+      propertyPath: attackTimer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 856767097458700783, guid: 98376adc68b930548b1c5f2325b5d094, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
