@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
         }
 
         SceneManager.LoadScene("Map");
-        
     }
 
     public void resetCall()
@@ -36,13 +35,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(goEnemies != null)
+        if(goEnemies == null)
         {
-            if (player.getHP().x <= 0.0f)
-            {
-                player.resetChk(true);
-                resetCall();
-            }
+            goEnemies = GameObject.FindWithTag("EnemiesManager");
+            enemies = goEnemies.GetComponentsInChildren<Enemy>();
+        }
+        else if (player.getHP().x <= 0.0f)
+        {
+            player.resetChk(true);
+            resetCall();
         }
     }
 }

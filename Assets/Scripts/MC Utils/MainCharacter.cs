@@ -43,8 +43,7 @@ public class MainCharacter : MonoBehaviour
 
     public int getCost()
     {
-        float lvl = getLevel();
-        return (int)(0.25f * (lvl * lvl * lvl) + 0.5f * (lvl * lvl) + 5.0f * (lvl));
+        return (int)(0.25f * (Level * Level) + 2.5f * (Level));
     }
 
     public void takeDamage(float v)
