@@ -12,6 +12,7 @@ TagManager:
   - GameManager
   - EnemyList
   - EnemiesManager
+  - NonRootEntity
   layers:
   - Default
   - TransparentFX

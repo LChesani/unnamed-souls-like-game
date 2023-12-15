@@ -49,19 +49,27 @@ public class Enemy : MonoBehaviour
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
         {
             playerDirection = player.transform.position - transform.position;
+            if(tag == "NonRootEntity")
+            {
+                playerDirection = transform.position - player.transform.position;
+            }
             playerDirection.y = 0f;
             Quaternion targetRotation = Quaternion.LookRotation(playerDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
-        if(timing > 0.0f)
+        if(weapon != null)
         {
-            timing -= Time.deltaTime;
-            weapon.damage = damage;
+            if (timing > 0.0f)
+            {
+                timing -= Time.deltaTime;
+                weapon.damage = damage;
+            }
+            else
+            {
+                weapon.damage = 0.0f;
+            }
         }
-        else
-        {
-            weapon.damage = 0.0f;
-        }
+        
         
 
         if(hp <= 0)
