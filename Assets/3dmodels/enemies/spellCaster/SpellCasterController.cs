@@ -13,6 +13,7 @@ public class SpellCasterController : MonoBehaviour
     GameObject cast;
     float initialPos;
     float timer;
+    System.Random rnd;
     void Start()
     {
         initialPos = transform.position.y - 0.5f;
@@ -20,6 +21,7 @@ public class SpellCasterController : MonoBehaviour
         player = GameObject.FindWithTag("Player").GetComponent<MainCharacter>();
         cast = new GameObject();
         cast = null;
+        rnd = new System.Random();
     }
     Vector3 atkDir = Vector3.zero;
     void ataca()
@@ -37,7 +39,9 @@ public class SpellCasterController : MonoBehaviour
         if(timer >= 2 * Mathf.PI) timer = 0.0f;
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
         {
+
             playerDirection = player.transform.position - transform.position;
+            playerDirection *= (float)rnd.NextDouble();
             playerDirection.y = 0f;
             playerDirection = playerDirection.normalized * speed * Time.deltaTime;
             transform.Translate(playerDirection);

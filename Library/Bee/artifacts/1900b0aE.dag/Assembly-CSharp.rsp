@@ -368,6 +368,8 @@
 "Assets/GameManager.cs"
 "Assets/Scripts/Map/HerosMemory.cs"
 "Assets/Scripts/Map/MapInit.cs"
+"Assets/Scripts/Map/PopUp.cs"
+"Assets/Scripts/Map/Portal.cs"
 "Assets/Scripts/MC Utils/Attribute.cs"
 "Assets/Scripts/MC Utils/MainCharacter.cs"
 "Assets/Scripts/MC Utils/TargetFollow.cs"
